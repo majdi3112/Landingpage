@@ -13,41 +13,73 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
-  <!-- Navigation -->
-<nav class="bg-white shadow">
-    <!-- Gebruik w-full in plaats van max-w-6xl als je écht tot de rand wilt gaan -->
-    <div class="w-full flex justify-between items-center h-16 px-4 lg:px-8">
-      <!-- Logo link -->
-      <a href="https://consultium.info" class="flex items-center">
-        <img
-          src="images/logo.png"
-          alt="Healthscribe Logo"
-         class="h-8 w-auto object-contain transform scale-[4.5] origin-left mt-6
-        ">
+<!-- Sticky, semi-transparante blurred nav -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+    <!-- Logo + naam -->
+    <a href="https://consultium.info" class="flex items-center space-x-3">
+      <img
+        src="images/logo.png"
+        alt="Consultium Logo"
+        class="h-10 w-auto object-contain"
+      />
+      <span class="text-2xl font-bold text-blue-600">Consultium</span>
+    </a>
+
+    <!-- Menu items -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#features"
+         class="relative font-medium text-gray-700 hover:text-blue-600 transition">
+        Features
+        <span class="absolute bottom-0 left-0 block h-1 w-0 bg-blue-600 transition-all group-hover:w-full"></span>
       </a>
-  
-      <!-- Menu + Call-to-Action -->
-      <div class="flex items-center space-x-6">
-        <a href="#features" class="font-medium hover:text-blue-600 mt-4">Features</a>
-        <a href="#pricing" class="font-medium hover:text-blue-600 mt-4">Prijzen</a>
-        <a href="#contact" class="font-medium hover:text-blue-600 mt-4">Contact</a>
-        <a
-          href="https://consultium.app"
-          class="inline-block
-                 bg-gradient-to-r from-blue-500 to-blue-600
-                 text-white font-semibold
-                 py-3 px-6
-                 rounded-xl
-                 shadow-lg
-                 transform transition duration-300 ease-out
-                 hover:scale-105 hover:from-blue-600 hover:to-blue-700
-                 focus:outline-none focus:ring-4 focus:ring-blue-300 mt-4"
-        >
-          Gebruik App
-        </a>
-      </div>
+      <a href="#pricing"
+         class="relative font-medium text-gray-700 hover:text-blue-600 transition">
+        Prijzen
+        <span class="absolute bottom-0 left-0 block h-1 w-0 bg-blue-600 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#contact"
+         class="relative font-medium text-gray-700 hover:text-blue-600 transition">
+        Contact
+        <span class="absolute bottom-0 left-0 block h-1 w-0 bg-blue-600 transition-all group-hover:w-full"></span>
+      </a>
     </div>
-  </nav>
+
+    <!-- Call to action -->
+    <div class="flex items-center space-x-4">
+      <a
+        href="https://consultium.app"
+        class="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold
+               px-5 py-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+      >
+        Probeer Gratis
+      </a>
+
+      <!-- Hamburger voor mobiel -->
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobiel menu (initially hidden) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-md">
+    <a href="#features" class="block px-6 py-3 border-b hover:bg-gray-100">Features</a>
+    <a href="#pricing" class="block px-6 py-3 border-b hover:bg-gray-100">Prijzen</a>
+    <a href="#contact" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+  </div>
+</nav>
+
+<script>
+  // simpele toggle voor mobiel menu
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
   
   <!-- Hero -->
   <header class="flex-1 bg-white py-24">
@@ -204,4 +236,3 @@ Probeer Gratis
   </footer>
 
 </body>
-</html>
