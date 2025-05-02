@@ -14,38 +14,41 @@
 <body class="flex flex-col min-h-screen">
 
   <!-- Navigation -->
-<nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-7xl bg-white bg-opacity-30 backdrop-blur-md rounded-full shadow-md">
-  <div class="flex items-center justify-between h-16 px-6">
-  <!-- Logo -->
+<nav
+  class="
+    fixed inset-x-0           /*  full width, van links tot rechts */
+    top-4                     /*  afstand vanaf bovenkant (pas 0,1,2,4,6,8 …) */
+    z-50                      /*  altijd boven andere content */
+    bg-white bg-opacity-30    /*  witte achtergrond, 30% dekking */
+    backdrop-blur-md          /*  blur effect */
+    rounded-full              /*  geheel pill-vorm; voor alleen onder ronding: rounded-b-full */
+    shadow-md                 /*  drop-shadow */
+    py-4                      /*  padding-y: bar-hoogte; verhoog bij py-6, py-8… */
+    px-8                      /*  padding-x: binnenmarge; verhoog/verlaag bij px-4, px-12… */
+  "
+>
+  <div class="flex items-center justify-between mx-auto max-w-screen-xl">
+    <!-- Logo: pas h-16, h-20, h-24… naar gewenste hoogte -->
     <a href="https://consultium.info" class="flex items-center">
-      <img src="images/logo.png" alt="Consultium Logo" class="h-10 w-auto object-contain"/>
+      <img
+        src="images/logo.png"
+        alt="Consultium Logo"
+        class="h-20 w-auto object-contain"
+      />
     </a>
 
-    <!-- Menu -->
+    <!-- Menu items -->
     <ul class="flex space-x-8">
-      <li>
-        <a href="#features"
-           class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">
-          Features
-        </a>
-      </li>
-      <li>
-        <a href="#pricing"
-           class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">
-          Prijzen
-        </a>
-      </li>
-      <li>
-        <a href="#contact"
-           class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">
-          Contact
-        </a>
-      </li>
+      <li><a href="#features" class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">Features</a></li>
+      <li><a href="#pricing"  class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">Prijzen</a></li>
+      <li><a href="#contact"  class="px-4 py-2 rounded-full text-gray-800 hover:bg-blue-100 hover:text-blue-600 transition">Contact</a></li>
     </ul>
 
-    <!-- CTA -->
-    <a href="https://consultium.app"
-       class="ml-4 px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-lg hover:scale-105 transition">
+    <!-- Call-to-action -->
+    <a
+      href="https://consultium.app"
+      class="ml-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-lg hover:scale-105 transition"
+    >
       Try For Free
     </a>
   </div>
