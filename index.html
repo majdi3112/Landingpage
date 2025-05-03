@@ -7,6 +7,12 @@
   <link rel="icon" href="images/icon.png" type="image/png" sizes="168x168">
   <title>Consultium – Jouw Medische Transcriptie App</title>
   <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* 1) Smooth scroll voor alle interne anker-links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
@@ -49,7 +55,7 @@
 
     <!-- Content boven de overlay -->
     <div class="relative z-10 max-w-4xl mx-auto text-center px-6 py-36">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6 py-35">
         Medische Transcriptie Assistent
       </h1>
       <p class="text-lg mb-8">
@@ -67,23 +73,24 @@
     </div>
 
     <!-- Golfovergang naar features -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-      <svg
-        class="relative block w-full h-16"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,0 C150,100 350,100 600,50 C850,0 1050,0 1200,50 L1200,120 L0,120 Z"
-          fill="rgba(29, 78, 216, 0.2)"
-        ></path>
-        <path
-          d="M0,0 C150,80 350,80 600,30 C850,-20 1050,-20 1200,30 L1200,120 L0,120 Z"
-          fill="rgba(29, 78, 216, 0.4)"
-        ></path>
-      </svg>
-    </div>
+ <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+    <svg
+      class="relative block w-[200%] h-16"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+      style="animation: wave-slide 8s linear infinite;"
+    >
+      <path
+        d="M0,0 C150,100 350,100 600,50 C850,0 1050,0 1200,50 L1200,120 L0,120 Z"
+        fill="#ffffff"
+      />
+      <path
+        d="M0,0 C150,80 350,80 600,30 C850,-20 1050,-20 1200,30 L1200,120 L0,120 Z"
+        fill="#ffffff"
+      />
+    </svg>
+  </div>
   </header>
   
 <!-- Features -->
