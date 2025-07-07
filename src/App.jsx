@@ -1,3 +1,4 @@
+const BASE = import.meta.env.BASE_URL || './';
 // src/App.jsx
 import { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
@@ -113,7 +114,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <video
-              src="/videos/soep-demo.mp4"
+              src={`${BASE}videos/soep-demo.mp4`}
               controls
               autoPlay
               muted
