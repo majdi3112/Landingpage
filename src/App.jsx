@@ -1,9 +1,11 @@
-const BASE = import.meta.env.BASE_URL || './';
 // src/App.jsx
 import { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Navbar from "./components/Common/Navbar";
 import "./App.css";
+
+// BASE is the Vite public base URL (e.g. "/Landingpage/") or "./" for relative
+const BASE = import.meta.env.BASE_URL || "./";
 
 function CountUp({ from = 0, to = 0, duration = 1, className = "" }) {
   const motionValue = useMotionValue(from);
