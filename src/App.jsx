@@ -31,7 +31,7 @@ export default function App() {
     <div
       className="font-sans text-white min-h-screen"
       style={{
-        backgroundImage: "url('/images/wave-bg.jpg')",
+        backgroundImage: `url(${BASE}images/wave-bg.jpg)`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed"
@@ -136,7 +136,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <img
-              src="/images/live-opname-illustration.jpg"
+    src={`${BASE}images/live-opname-illustration.jpg`}
               alt="Live opname"
               className="w-full h-full object-cover rounded-xl shadow-xl"
             />
