@@ -138,7 +138,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <img
-  src={`${import.meta.env.BASE_URL}images/live-opname-illustration.jpg`}
+  src={`Landingpage/images/live-opname-illustration.jpg`}
   alt="Live opname"
   className="w-full h-full object-cover rounded-xl shadow-xl"
 />
